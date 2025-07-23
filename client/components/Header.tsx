@@ -11,7 +11,7 @@ export default function Header() {
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/69e2ec3f0099466be6fed5005d631f518ae9f1f6?width=803"
                 alt="Al Umnayat Auto Paints"
-                className="h-20 w-auto md:h-24 lg:h-28"
+                className="h-24 w-auto md:h-32 lg:h-36"
               />
             </Link>
           </div>
