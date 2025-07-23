@@ -14,7 +14,6 @@ export default function Index() {
           alt="Car painting service"
           className="w-full h-full object-cover"
         />
-        {/* Hero content can be added here if needed */}
       </section>
 
       {/* Products for Car Body Shop Stages */}
