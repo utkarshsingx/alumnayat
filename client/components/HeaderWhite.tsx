@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function HeaderWhite() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header className="absolute top-0 left-0 right-0 z-50 w-full">
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 opacity-80">
-        <svg width="1920" height="176" viewBox="0 0 1920 176" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <div className="absolute top-0 left-0 w-full h-48 opacity-80">
+        <svg width="100%" height="100%" viewBox="0 0 1920 176" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full" preserveAspectRatio="none">
           <g opacity="0.8">
             <path d="M0 -1H1920V118.676H0V-1Z" fill="url(#paint0_linear_115_5)"/>
             <path d="M0 28.1648H1920V147.841H0V28.1648Z" fill="url(#paint1_linear_115_5)"/>
