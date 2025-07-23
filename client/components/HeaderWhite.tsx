@@ -36,7 +36,7 @@ export default function HeaderWhite() {
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/9beeef5bb521d46be816f09b7b337722308d230f?width=802"
                 alt="Al Umnayat Auto Paints - White Logo"
-                className="h-20 w-auto md:h-24 lg:h-28"
+                className="h-24 w-auto md:h-32 lg:h-36"
               />
             </Link>
           </div>
