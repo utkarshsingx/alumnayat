@@ -26,13 +26,6 @@ export default function Contact() {
             alt="Contact Us Banner Top"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          
-          {/* Hero Title Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white text-center uppercase font-montserrat">
-              Reach Out To Us
-            </h1>
-          </div>
         </div>
       </section>
 
