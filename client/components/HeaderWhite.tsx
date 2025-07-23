@@ -88,14 +88,6 @@ export default function HeaderWhite() {
             </button>
           </div>
         </div>
-
-        {/* Navigation underlines */}
-        <div className="hidden md:flex justify-center space-x-52 pb-2">
-          <div className="w-10 h-px bg-white"></div>
-          <div className="w-10 h-px bg-white"></div>
-          <div className="w-10 h-px bg-white"></div>
-          <div className="w-10 h-px bg-white"></div>
-        </div>
       </div>
     </header>
   );
