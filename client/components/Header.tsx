@@ -11,40 +11,44 @@ export default function Header() {
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/69e2ec3f0099466be6fed5005d631f518ae9f1f6?width=803"
                 alt="Al Umnayat Auto Paints"
-                className="h-16 w-auto md:h-20"
+                className="h-20 w-auto md:h-24 lg:h-28"
               />
             </Link>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center">
             <Link
               to="/"
-              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors"
+              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors px-6"
             >
               Home
             </Link>
+            <div className="w-px h-6 bg-black"></div>
             <Link
               to="/products"
-              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors"
+              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors px-6"
             >
               Products
             </Link>
+            <div className="w-px h-6 bg-black"></div>
             <Link
               to="/about"
-              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors"
+              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors px-6"
             >
               About Us
             </Link>
+            <div className="w-px h-6 bg-black"></div>
             <Link
               to="/gallery"
-              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors"
+              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors px-6"
             >
               Gallery
             </Link>
+            <div className="w-px h-6 bg-black"></div>
             <Link
               to="/contact"
-              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors"
+              className="text-black font-montserrat font-medium text-lg hover:text-brand-navy transition-colors px-6"
             >
               Contact Us
             </Link>
