@@ -1,19 +1,18 @@
-import Header from "../components/Header";
+import HeaderWhite from "../components/HeaderWhite";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 
 export default function Index() {
   return (
     <div className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
+      {/* Hero Section with Header Overlay */}
       <section className="relative h-screen">
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/99530bb3b53e11a3ba6d8efaaa7e02f49de1dc7f?width=3840"
           alt="Car painting service"
           className="w-full h-full object-cover"
         />
+        <HeaderWhite />
       </section>
 
       {/* Products for Car Body Shop Stages */}
