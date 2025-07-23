@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,22 +27,26 @@ export default function About() {
             <div className="border-4 border-black rounded-3xl p-8 md:p-12 relative">
               {/* Opening Quote */}
               <div className="absolute -top-6 -left-6 bg-white px-4">
-                <span className="text-8xl font-extrabold text-black font-montserrat">"</span>
+                <span className="text-8xl font-extrabold text-black font-montserrat">
+                  "
+                </span>
               </div>
-              
+
               {/* Quote Content */}
               <div className="text-center space-y-6">
                 <p className="text-xl md:text-2xl font-medium text-black font-montserrat leading-relaxed">
-                  We are proud to play an active role in advancing the UAE's automotive collision and 
-                  refinish sector. Our commitment goes beyond supply—we strive to deliver 
-                  world-class brands backed by exceptional service, technical expertise, 
-                  and long-term partnerships.
+                  We are proud to play an active role in advancing the UAE's
+                  automotive collision and refinish sector. Our commitment goes
+                  beyond supply—we strive to deliver world-class brands backed
+                  by exceptional service, technical expertise, and long-term
+                  partnerships.
                 </p>
                 <p className="text-xl md:text-2xl font-medium text-black font-montserrat leading-relaxed">
-                  By aligning with global standards and local market needs, 
-                  we aim to be a trusted contributor to the industry's growth and innovation
+                  By aligning with global standards and local market needs, we
+                  aim to be a trusted contributor to the industry's growth and
+                  innovation
                 </p>
-                
+
                 {/* Attribution */}
                 <div className="pt-4">
                   <p className="text-lg font-bold text-brand-navy font-montserrat uppercase">
@@ -53,10 +57,12 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              
+
               {/* Closing Quote */}
               <div className="absolute -bottom-6 -right-6 bg-white px-4">
-                <span className="text-8xl font-extrabold text-black font-montserrat">"</span>
+                <span className="text-8xl font-extrabold text-black font-montserrat">
+                  "
+                </span>
               </div>
             </div>
           </div>
@@ -83,10 +89,11 @@ export default function About() {
                   CFO
                 </p>
                 <p className="text-lg font-medium text-black font-montserrat leading-relaxed">
-                  Mr. Ikram is a highly esteemed finance professional and a qualified 
-                  Chartered Accountant, boasting over 20 years of exemplary experience 
-                  in the Middle East. His profound financial acumen and unwavering 
-                  discipline have become the cornerstone of our company's success.
+                  Mr. Ikram is a highly esteemed finance professional and a
+                  qualified Chartered Accountant, boasting over 20 years of
+                  exemplary experience in the Middle East. His profound
+                  financial acumen and unwavering discipline have become the
+                  cornerstone of our company's success.
                 </p>
               </div>
               <div className="order-1 lg:order-2 flex justify-center">
@@ -115,11 +122,15 @@ export default function About() {
                   Sr. Manager Sales and Operations
                 </p>
                 <p className="text-lg font-medium text-black font-montserrat leading-relaxed">
-                  Ranga as our Senior Manager, bringing extensive experience in automotive refinish technologies and a fresh strategic outlook. 
-                  Having worked with leading BASF distributors across the 
-                  Middle East—Al Fardan Group in Qatar and Al Nizamia in Kuwait—Ranga has quickly made his mark in the UAE market, achieving key 
-                  milestones in record time. His deep industry knowledge and drive for innovation strengthen our technical edge and reinforce our 
-                  commitment to excellence in service and product delivery.
+                  Ranga as our Senior Manager, bringing extensive experience in
+                  automotive refinish technologies and a fresh strategic
+                  outlook. Having worked with leading BASF distributors across
+                  the Middle East—Al Fardan Group in Qatar and Al Nizamia in
+                  Kuwait—Ranga has quickly made his mark in the UAE market,
+                  achieving key milestones in record time. His deep industry
+                  knowledge and drive for innovation strengthen our technical
+                  edge and reinforce our commitment to excellence in service and
+                  product delivery.
                 </p>
               </div>
             </div>
@@ -138,15 +149,17 @@ export default function About() {
           {/* Company Description */}
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-xl md:text-2xl font-medium text-black font-montserrat leading-relaxed">
-              We are a leading car paint and paint ancillaries products Import, retail, wholesale, and distribution company 
-              based in the UAE, strategically located on BMW Road in the heart of the 
-              automotive spare parts market in Sharjah.
+              We are a leading car paint and paint ancillaries products Import,
+              retail, wholesale, and distribution company based in the UAE,
+              strategically located on BMW Road in the heart of the automotive
+              spare parts market in Sharjah.
             </p>
             <br />
             <p className="text-xl md:text-2xl font-medium text-black font-montserrat leading-relaxed">
-              Our operations are supported by a dedicated team of trained sales professionals, skilled colour mixers, 
-              and an efficient delivery fleet — all committed to providing exceptional products 
-              and reliable service to our valued clients across the region.
+              Our operations are supported by a dedicated team of trained sales
+              professionals, skilled colour mixers, and an efficient delivery
+              fleet — all committed to providing exceptional products and
+              reliable service to our valued clients across the region.
             </p>
           </div>
         </div>

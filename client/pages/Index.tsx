@@ -20,7 +20,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy text-center uppercase font-montserrat mb-16">
-            Products for<br />Car Body Shop Stages
+            Products for
+            <br />
+            Car Body Shop Stages
           </h2>
 
           {/* Product Categories */}
@@ -107,7 +109,9 @@ export default function Index() {
       <section className="py-16 bg-brand-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white text-center uppercase font-montserrat mb-16">
-            Products available for<br />every stage of car painting
+            Products available for
+            <br />
+            every stage of car painting
           </h2>
 
           {/* Brand Logos Grid */}

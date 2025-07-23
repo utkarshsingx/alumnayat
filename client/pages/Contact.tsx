@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       {/* Hero Banner Section */}
       <section className="relative">
         <div className="relative">
@@ -78,8 +78,10 @@ export default function Contact() {
                   />
                   <div>
                     <h3 className="text-2xl font-bold text-brand-navy font-montserrat uppercase leading-tight">
-                      BMW Road,<br />
-                      Near Sedana Trading,<br />
+                      BMW Road,
+                      <br />
+                      Near Sedana Trading,
+                      <br />
                       Sharjah Industrial 1, UAE
                     </h3>
                   </div>

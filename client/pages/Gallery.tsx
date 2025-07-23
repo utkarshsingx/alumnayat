@@ -5,23 +5,33 @@ export default function Gallery() {
   const photos = [
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/90e58dc05c76fd065605fc92ca0226f3a159e554?width=2860",
-      alt: "Company Event Photo 1"
+      alt: "Company Event Photo 1",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/d496d446a0d3ff6d83ecc821331f81de753de084?width=2860", 
-      alt: "Company Event Photo 2"
+      src: "https://api.builder.io/api/v1/image/assets/TEMP/d496d446a0d3ff6d83ecc821331f81de753de084?width=2860",
+      alt: "Company Event Photo 2",
     },
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/0c9218cec8de15c8abe2bde05552ccfaf1b23f85?width=2860",
-      alt: "Company Event Photo 3"
-    }
+      alt: "Company Event Photo 3",
+    },
   ];
 
   const PlayButton = () => (
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="w-18 h-18 md:w-24 md:h-24 bg-white bg-opacity-80 rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-90 transition-all">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 md:w-12 md:h-12">
-          <path d="M38 22.268C39.3333 23.0378 39.3333 24.9622 38 25.732L18 37.1769C16.6667 37.9467 15 36.9845 15 35.445L15 12.555C15 11.0155 16.6667 10.0533 18 10.8231L38 22.268Z" fill="#666"/>
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-8 h-8 md:w-12 md:h-12"
+        >
+          <path
+            d="M38 22.268C39.3333 23.0378 39.3333 24.9622 38 25.732L18 37.1769C16.6667 37.9467 15 36.9845 15 35.445L15 12.555C15 11.0155 16.6667 10.0533 18 10.8231L38 22.268Z"
+            fill="#666"
+          />
         </svg>
       </div>
     </div>
@@ -30,16 +40,15 @@ export default function Gallery() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-grow bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           {/* Photos Section */}
           <section className="mb-24">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy text-center uppercase font-montserrat mb-16">
               Photos
             </h1>
-            
+
             <div className="space-y-8">
               {photos.map((photo, index) => (
                 <div key={index} className="flex justify-center">
@@ -58,7 +67,7 @@ export default function Gallery() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy text-center uppercase font-montserrat mb-16">
               Videos
             </h2>
-            
+
             <div className="space-y-8">
               {/* Main Video */}
               <div className="flex justify-center mb-12">
@@ -104,7 +113,8 @@ export default function Gallery() {
                 className="h-20 w-auto"
               />
               <div className="font-montserrat font-bold text-lg leading-relaxed">
-                Al Umnayat - Al Jadeeda<br />
+                Al Umnayat - Al Jadeeda
+                <br />
                 Auto Paints TR L.L.C.SP
               </div>
             </div>
@@ -131,7 +141,8 @@ export default function Gallery() {
                   className="w-6 h-6 mt-1"
                 />
                 <div className="font-montserrat font-bold text-lg leading-relaxed">
-                  BMW Road, Near Sedana Trading,<br />
+                  BMW Road, Near Sedana Trading,
+                  <br />
                   Sharjah Industrial 1, UAE
                 </div>
               </div>
@@ -153,7 +164,7 @@ export default function Gallery() {
                   Who We Are
                 </a>
               </div>
-              
+
               {/* Social Media Icons */}
               <div className="flex space-x-4">
                 <a href="#" className="hover:opacity-80 transition-opacity">
@@ -166,7 +177,7 @@ export default function Gallery() {
                 <a href="#" className="hover:opacity-80 transition-opacity">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/17004d2acd7425ca0ca8fe671b4ab6ce0930b2f8?width=110"
-                    alt="Instagram" 
+                    alt="Instagram"
                     className="w-8 h-8"
                   />
                 </a>

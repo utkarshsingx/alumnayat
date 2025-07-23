@@ -13,7 +13,8 @@ export default function Footer() {
               className="h-24 w-auto md:h-28 lg:h-32"
             />
             <div className="font-montserrat font-bold text-xl leading-relaxed">
-              Al Umnayat - Al Jadeeda<br />
+              Al Umnayat - Al Jadeeda
+              <br />
               Auto Paints TR L.L.C.SP
             </div>
           </div>
@@ -40,7 +41,8 @@ export default function Footer() {
                 className="w-6 h-6 mt-1"
               />
               <div className="font-montserrat font-bold text-lg leading-relaxed">
-                BMW Road, Near Sedana Trading,<br />
+                BMW Road, Near Sedana Trading,
+                <br />
                 Sharjah Industrial 1, UAE
               </div>
             </div>
