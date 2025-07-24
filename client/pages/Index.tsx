@@ -170,8 +170,8 @@ export default function Index() {
             </div>
             <div className="bg-white rounded-3xl border-4 border-white p-4 flex items-center justify-center h-32">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/5557c98907d50345b5f676e98c2749b13db96f7b?width=348"
-                alt="RX"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F29627b8dabbf4e7f9207c2cb50b1fad7?format=webp&width=800"
+                alt="Blowtherm"
                 className="max-w-full max-h-full object-contain"
               />
             </div>
