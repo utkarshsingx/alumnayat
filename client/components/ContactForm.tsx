@@ -26,8 +26,9 @@ export default function ContactForm() {
     const body = `
 New contact form submission:
 
-Name: ${formData.name}
-Surname: ${formData.surname}
+Company Name: ${formData.companyName}
+Contact Person: ${formData.contactPerson}
+Phone Number: ${formData.phoneNumber}
 Email: ${formData.email}
 Message: ${formData.message}
 
@@ -42,7 +43,7 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
     window.location.href = mailtoLink;
 
     // Reset form
-    setFormData({ name: "", surname: "", email: "", message: "" });
+    setFormData({ companyName: "", contactPerson: "", phoneNumber: "", email: "", message: "" });
 
     // Show success message
     alert(
