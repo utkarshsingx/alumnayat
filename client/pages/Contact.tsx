@@ -14,7 +14,7 @@ export default function Contact() {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/b696774eb0162f65fe25a3490d33b64482a49a6a?width=3840"
             alt="Contact Us Banner"
-            className="w-full h-96 md:h-[500px] object-cover object-center"
+            className="w-full h-96 md:h-[500px] object-cover object-top"
           />
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/447127c82849cb3ff20911b964184896caa2dfba?width=3840"
