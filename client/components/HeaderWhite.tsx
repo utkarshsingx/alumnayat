@@ -146,6 +146,49 @@ export default function HeaderWhite() {
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-black bg-opacity-95 z-40">
+            <nav className="flex flex-col py-4">
+              <Link
+                to="/"
+                className="text-white font-montserrat font-medium text-lg hover:text-gray-300 transition-colors px-6 py-3 border-b border-gray-700"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/products"
+                className="text-white font-montserrat font-medium text-lg hover:text-gray-300 transition-colors px-6 py-3 border-b border-gray-700"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Products
+              </Link>
+              <Link
+                to="/about"
+                className="text-white font-montserrat font-medium text-lg hover:text-gray-300 transition-colors px-6 py-3 border-b border-gray-700"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/gallery"
+                className="text-white font-montserrat font-medium text-lg hover:text-gray-300 transition-colors px-6 py-3 border-b border-gray-700"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Gallery
+              </Link>
+              <Link
+                to="/contact"
+                className="text-white font-montserrat font-medium text-lg hover:text-gray-300 transition-colors px-6 py-3"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
