@@ -20,16 +20,16 @@ export default function Gallery() {
   const videos = [
     {
       src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F40fe2dfc2bcf45c4adfe6842ef6ad07a?alt=media&token=e2d0d1f3-7684-4776-8f46-b3bb38a0d666&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
-      type: "main"
+      type: "main",
     },
     {
       src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F2776c706b5d44fab9b83cb64fa4e8963?alt=media&token=5fc156ae-2962-4f85-a310-fd369338bd65&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
-      type: "side"
+      type: "side",
     },
     {
       src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F4224a000d2644e5695b52753ba61243c?alt=media&token=f162f5fa-1e8f-48c8-84cd-5994b80c42f4&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
-      type: "side"
-    }
+      type: "side",
+    },
   ];
 
   const PlayButton = () => (
@@ -102,10 +102,7 @@ export default function Gallery() {
                         e.currentTarget.currentTime = 0;
                       }}
                     >
-                      <source
-                        src={videos[0].src}
-                        type="video/mp4"
-                      />
+                      <source src={videos[0].src} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
@@ -133,10 +130,7 @@ export default function Gallery() {
                         e.currentTarget.currentTime = 0;
                       }}
                     >
-                      <source
-                        src={videos[1].src}
-                        type="video/mp4"
-                      />
+                      <source src={videos[1].src} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
@@ -160,10 +154,7 @@ export default function Gallery() {
                         e.currentTarget.currentTime = 0;
                       }}
                     >
-                      <source
-                        src={videos[2].src}
-                        type="video/mp4"
-                      />
+                      <source src={videos[2].src} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
