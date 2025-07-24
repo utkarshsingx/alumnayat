@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-navy text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 lg:gap-12 items-start">
           {/* Logo and Company Name */}
           <div className="space-y-6 flex flex-col items-start">
             <img
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-6 md:space-y-4">
             <Link
               to="/products"
               className="block font-montserrat font-bold text-lg hover:text-gray-300 transition-colors"
