@@ -54,35 +54,52 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
   return (
     <div className="bg-gray-300 p-6 rounded-lg border border-gray-300 max-w-4xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Name Field */}
+        {/* Company Name Field */}
         <div className="space-y-2">
-          <label htmlFor="name" className="block text-gray-800 font-medium">
-            Name
+          <label htmlFor="companyName" className="block text-gray-800 font-medium">
+            Company Name
           </label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={formData.name}
+            id="companyName"
+            name="companyName"
+            value={formData.companyName}
             onChange={handleChange}
-            placeholder="Your name"
+            placeholder="Your company name"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-navy"
             required
           />
         </div>
 
-        {/* Surname Field */}
+        {/* Contact Person Field */}
         <div className="space-y-2">
-          <label htmlFor="surname" className="block text-gray-800 font-medium">
-            Surname
+          <label htmlFor="contactPerson" className="block text-gray-800 font-medium">
+            Contact Person
           </label>
           <input
             type="text"
-            id="surname"
-            name="surname"
-            value={formData.surname}
+            id="contactPerson"
+            name="contactPerson"
+            value={formData.contactPerson}
             onChange={handleChange}
-            placeholder="Your surname"
+            placeholder="Contact person name"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-navy"
+            required
+          />
+        </div>
+
+        {/* Phone Number Field */}
+        <div className="space-y-2">
+          <label htmlFor="phoneNumber" className="block text-gray-800 font-medium">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            placeholder="Your phone number"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-navy"
             required
           />
