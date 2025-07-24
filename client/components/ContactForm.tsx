@@ -44,7 +44,9 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
     setFormData({ name: "", surname: "", email: "", message: "" });
 
     // Show success message
-    alert("Your message has been prepared for sending. Your email client should open shortly.");
+    alert(
+      "Your message has been prepared for sending. Your email client should open shortly.",
+    );
   };
 
   return (

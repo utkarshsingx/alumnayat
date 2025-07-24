@@ -86,8 +86,6 @@ export default function Contact() {
                     </h3>
                   </div>
                 </div>
-
-
               </div>
 
               {/* Map */}
