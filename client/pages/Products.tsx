@@ -91,10 +91,23 @@ export default function Products() {
     <div className="min-h-screen flex flex-col">
       {/* Hero Section with Header Overlay */}
       <section className="relative h-screen">
+        {/* Desktop Banner */}
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/dd57b1f384570e157e5eeb9f59a1eeeb57f789a3?width=3840"
-          alt="Product Banner"
-          className="w-full h-full object-cover"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2Fd1471fd59f8e4f0283cd269ad58f67b6?format=webp&width=800"
+          alt="Product Banner Desktop"
+          className="hidden lg:block w-full h-full object-cover"
+        />
+        {/* Tablet Banner */}
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F3a6f0751b17a49469d2b2140e3cf1bea?format=webp&width=800"
+          alt="Product Banner Tablet"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
+        />
+        {/* Mobile Banner */}
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F93a91b246a064b6e9fdfa2d29b08df38?format=webp&width=800"
+          alt="Product Banner Mobile"
+          className="block md:hidden w-full h-full object-cover"
         />
         <HeaderWhite />
       </section>
