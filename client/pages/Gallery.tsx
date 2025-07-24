@@ -126,10 +126,10 @@ export default function Gallery() {
                 </div>
               </div>
 
-              {/* Two Smaller Videos - More Height */}
+              {/* Two Smaller Videos - Portrait Format */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
-                  <div className="w-full h-80 md:h-96 lg:h-[450px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
+                  <div className="w-full h-96 md:h-[500px] lg:h-[600px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
                       className="w-full h-full object-cover"
                       loop
