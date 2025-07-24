@@ -26,8 +26,8 @@ export default function About() {
             {/* Quote Border */}
             <div className="border-4 border-black rounded-3xl p-8 md:p-12 relative">
               {/* Opening Quote */}
-              <div className="absolute -top-6 -left-6 bg-white px-4">
-                <span className="text-8xl font-extrabold text-black font-montserrat">
+              <div className="absolute -top-4 -left-4 bg-white px-2">
+                <span className="text-4xl md:text-5xl font-extrabold text-black font-montserrat">
                   "
                 </span>
               </div>
@@ -59,8 +59,8 @@ export default function About() {
               </div>
 
               {/* Closing Quote */}
-              <div className="absolute -bottom-6 -right-6 bg-white px-4">
-                <span className="text-8xl font-extrabold text-black font-montserrat">
+              <div className="absolute -bottom-4 -right-4 bg-white px-2">
+                <span className="text-4xl md:text-5xl font-extrabold text-black font-montserrat">
                   "
                 </span>
               </div>
