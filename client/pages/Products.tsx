@@ -8,54 +8,63 @@ export default function Products() {
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/f8941146311cd6a4f7183d50aa8367262c300cd3?width=766",
       background: "#FFF",
+      link: "https://www.3mae.ae/3M/en_AE/company-mea/",
     },
     {
       name: "Balsac",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/6b2995f2243bc8d37baeb17390538bafa7aa00dd?width=722",
       background: "#FFF",
+      link: "https://www.baslac.com/en-emea",
     },
     {
       name: "Diamond",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/9b67fa6a9907c16c2d3c081f5699a1e3876b5ec5?width=766",
       background: "#FFF",
+      link: "https://diamondprofilms.com/",
     },
     {
       name: "Indasa",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/0e97a9bc628547a327af4b03ac0903c97dd2ac01?width=734",
       background: "#FFF",
+      link: "https://www.indasa-abrasives.com/global/en",
     },
     {
       name: "Glasurit",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/b0644f0e7b1f995af84f732252dc800ce29a3e4d?width=766",
       background: "#FFF",
+      link: "https://www.glasurit.com/en-int",
     },
     {
       name: "Norbin",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/5b278c68acf2d7f9bad52c9c225b447749bfda17?width=720",
       background: "#FFF",
+      link: "https://www.norbin-paint.com/",
     },
     {
       name: "Wurth",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/2d4b837f519bb7ec9002312f35f9130ea30d9ee5?width=698",
       background: "#FFF",
+      link: "https://eshop.wurth.ae/",
     },
     {
       name: "Roberlo",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/c04fbb18a2b70932fcd0bfc52445f1f70576e3a8?width=728",
       background: "#004175",
+      link: "https://www.roberlo.com/en/",
     },
     {
       name: "Rupes",
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/891f3e47aa468b9b83cbe4bf45b0095d7ec8fba6?width=688",
       background: "#F00",
+      link: "https://www.rupes.com/",
     },
     {
       name: "Rx",
