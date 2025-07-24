@@ -43,7 +43,13 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
     window.location.href = mailtoLink;
 
     // Reset form
-    setFormData({ companyName: "", contactPerson: "", phoneNumber: "", email: "", message: "" });
+    setFormData({
+      companyName: "",
+      contactPerson: "",
+      phoneNumber: "",
+      email: "",
+      message: "",
+    });
 
     // Show success message
     alert(
@@ -56,7 +62,10 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Company Name Field */}
         <div className="space-y-2">
-          <label htmlFor="companyName" className="block text-gray-800 font-medium">
+          <label
+            htmlFor="companyName"
+            className="block text-gray-800 font-medium"
+          >
             Company Name
           </label>
           <input
@@ -73,7 +82,10 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
 
         {/* Contact Person Field */}
         <div className="space-y-2">
-          <label htmlFor="contactPerson" className="block text-gray-800 font-medium">
+          <label
+            htmlFor="contactPerson"
+            className="block text-gray-800 font-medium"
+          >
             Contact Person
           </label>
           <input
@@ -90,7 +102,10 @@ This email was sent from the Al Umnayat Auto Paints website contact form.
 
         {/* Phone Number Field */}
         <div className="space-y-2">
-          <label htmlFor="phoneNumber" className="block text-gray-800 font-medium">
+          <label
+            htmlFor="phoneNumber"
+            className="block text-gray-800 font-medium"
+          >
             Phone Number
           </label>
           <input

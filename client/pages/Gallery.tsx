@@ -105,7 +105,7 @@ export default function Gallery() {
                             await playPromise;
                           }
                         } catch (error) {
-                          console.log('Video play failed:', error);
+                          console.log("Video play failed:", error);
                         }
                       }}
                       onMouseLeave={(e) => {
@@ -125,7 +125,7 @@ export default function Gallery() {
                             e.currentTarget.currentTime = 0;
                           }
                         } catch (error) {
-                          console.log('Video interaction failed:', error);
+                          console.log("Video interaction failed:", error);
                         }
                       }}
                     >
@@ -160,7 +160,7 @@ export default function Gallery() {
                             await playPromise;
                           }
                         } catch (error) {
-                          console.log('Video play failed:', error);
+                          console.log("Video play failed:", error);
                         }
                       }}
                       onMouseLeave={(e) => {
@@ -180,7 +180,7 @@ export default function Gallery() {
                             e.currentTarget.currentTime = 0;
                           }
                         } catch (error) {
-                          console.log('Video interaction failed:', error);
+                          console.log("Video interaction failed:", error);
                         }
                       }}
                     >
@@ -211,7 +211,7 @@ export default function Gallery() {
                             await playPromise;
                           }
                         } catch (error) {
-                          console.log('Video play failed:', error);
+                          console.log("Video play failed:", error);
                         }
                       }}
                       onMouseLeave={(e) => {
@@ -231,7 +231,7 @@ export default function Gallery() {
                             e.currentTarget.currentTime = 0;
                           }
                         } catch (error) {
-                          console.log('Video interaction failed:', error);
+                          console.log("Video interaction failed:", error);
                         }
                       }}
                     >
