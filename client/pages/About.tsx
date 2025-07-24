@@ -50,7 +50,7 @@ export default function About() {
                 {/* Attribution */}
                 <div className="pt-4">
                   <p className="text-lg font-bold text-brand-navy font-montserrat uppercase">
-                    SYED AKBAR MEHDI
+                    SYED AKBAR
                   </p>
                   <p className="text-lg font-medium text-brand-navy font-montserrat uppercase">
                     CEO

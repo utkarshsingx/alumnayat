@@ -1,6 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+// CORRECTED IMPORT PATHS
+// From 'client/pages/Gallery.tsx', go up one level (..) to 'client/',
+// then into 'assets/videos'.
+import mainVideo from '../assets/videos/video1.mp4';
+import sideVideo1 from '../assets/videos/video2.mp4';
+import sideVideo2 from '../assets/videos/video3.mp4';
+
+
 export default function Gallery() {
   const photos = [
     {
@@ -19,38 +27,18 @@ export default function Gallery() {
 
   const videos = [
     {
-      src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F092df76bf3aa45c4ba5a9f09924c0d4f?alt=media&token=f688c4fd-aa27-4eca-b8cc-fddda2f2490a&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
+      src: mainVideo, // Use the imported video variable
       type: "main",
     },
     {
-      src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2Fc3d8fc4b74fc4d04bfc173cb8295f1bd?alt=media&token=f48a53cb-280c-42d8-b0b1-cc20f8682d30&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
+      src: sideVideo1, // Use the imported video variable
       type: "side",
     },
     {
-      src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2Fc4d20c7f04eb4e748f8217df32770612?alt=media&token=4c73a5e9-bf0a-4523-9d0a-b376beafc569&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
+      src: sideVideo2, // Use the imported video variable
       type: "side",
     },
   ];
-
-  const PlayButton = () => (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div className="w-18 h-18 md:w-24 md:h-24 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
-        <svg
-          width="48"
-          height="48"
-          viewBox="0 0 48 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-8 h-8 md:w-12 md:h-12"
-        >
-          <path
-            d="M38 22.268C39.3333 23.0378 39.3333 24.9622 38 25.732L18 37.1769C16.6667 37.9467 15 36.9845 15 35.445L15 12.555C15 11.0155 16.6667 10.0533 18 10.8231L38 22.268Z"
-            fill="#666"
-          />
-        </svg>
-      </div>
-    </div>
-  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -87,161 +75,81 @@ export default function Gallery() {
               {/* Main Video - Full Width */}
               <div className="flex justify-center mb-12">
                 <div className="relative w-full max-w-6xl">
-                  <div className="w-full h-96 md:h-[500px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
-                    <video
-                      className="w-full h-full object-cover"
-                      loop
-                      muted
-                      playsInline
-                      preload="metadata"
-                      onLoadedMetadata={(e) => {
-                        e.currentTarget.currentTime = 0;
-                      }}
-                      onMouseEnter={async (e) => {
-                        try {
-                          e.currentTarget.currentTime = 0;
-                          const playPromise = e.currentTarget.play();
-                          if (playPromise !== undefined) {
-                            await playPromise;
-                          }
-                        } catch (error) {
-                          console.log("Video play failed:", error);
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.pause();
-                        e.currentTarget.currentTime = 0;
-                      }}
-                      onClick={async (e) => {
-                        try {
-                          if (e.currentTarget.paused) {
-                            e.currentTarget.currentTime = 0;
-                            const playPromise = e.currentTarget.play();
-                            if (playPromise !== undefined) {
-                              await playPromise;
-                            }
-                          } else {
-                            e.currentTarget.pause();
-                            e.currentTarget.currentTime = 0;
-                          }
-                        } catch (error) {
-                          console.log("Video interaction failed:", error);
-                        }
-                      }}
-                    >
-                      <source src={videos[0].src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                    <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-                      <PlayButton />
-                    </div>
-                  </div>
+                  <video
+                    className="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-lg"
+                    muted        // Mute for autoplay on hover
+                    loop         // Loop for continuous preview
+                    playsInline  // Important for mobile browsers
+                    preload="metadata" // Load metadata to get duration/poster quickly
+                    onLoadedMetadata={(e) => {
+                      e.currentTarget.currentTime = 0; // Ensure starts from beginning
+                    }}
+                    onMouseEnter={(e) => {
+                      // Play the video when mouse enters
+                      e.currentTarget.play().catch(error => console.log("Video play failed on hover:", error));
+                    }}
+                    onMouseLeave={(e) => {
+                      // Pause and reset video when mouse leaves
+                      e.currentTarget.pause();
+                      e.currentTarget.currentTime = 0;
+                    }}
+                    // 'controls' attribute is removed here for a cleaner look during hover,
+                    // but you could add an onClick to toggle controls if desired for full playback.
+                  >
+                    <source src={videos[0].src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  {/* You might want a play button overlay that appears only when not hovered/playing */}
+                  {/* For simplicity here, we rely on hover for preview and no explicit click controls. */}
+                  {/* If you need a click-to-play with controls, additional state management would be needed. */}
                 </div>
               </div>
 
               {/* Two Portrait Videos - Increased Height */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
-                  <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
-                    <video
-                      className="w-full h-full object-cover"
-                      loop
-                      muted
-                      playsInline
-                      preload="metadata"
-                      onLoadedMetadata={(e) => {
-                        e.currentTarget.currentTime = 0;
-                      }}
-                      onMouseEnter={async (e) => {
-                        try {
-                          e.currentTarget.currentTime = 0;
-                          const playPromise = e.currentTarget.play();
-                          if (playPromise !== undefined) {
-                            await playPromise;
-                          }
-                        } catch (error) {
-                          console.log("Video play failed:", error);
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.pause();
-                        e.currentTarget.currentTime = 0;
-                      }}
-                      onClick={async (e) => {
-                        try {
-                          if (e.currentTarget.paused) {
-                            e.currentTarget.currentTime = 0;
-                            const playPromise = e.currentTarget.play();
-                            if (playPromise !== undefined) {
-                              await playPromise;
-                            }
-                          } else {
-                            e.currentTarget.pause();
-                            e.currentTarget.currentTime = 0;
-                          }
-                        } catch (error) {
-                          console.log("Video interaction failed:", error);
-                        }
-                      }}
-                    >
-                      <source src={videos[1].src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                    <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-                      <PlayButton />
-                    </div>
-                  </div>
+                  <video
+                    className="w-full h-[500px] md:h-[600px] lg:h-[700px] object-cover rounded-3xl shadow-lg"
+                    muted        // Mute for autoplay on hover
+                    loop         // Loop for continuous preview
+                    playsInline  // Important for mobile browsers
+                    preload="metadata"
+                    onLoadedMetadata={(e) => {
+                      e.currentTarget.currentTime = 0;
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.play().catch(error => console.log("Video play failed on hover:", error));
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.pause();
+                      e.currentTarget.currentTime = 0;
+                    }}
+                  >
+                    <source src={videos[1].src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
                 <div className="relative">
-                  <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
-                    <video
-                      className="w-full h-full object-cover"
-                      loop
-                      muted
-                      playsInline
-                      preload="metadata"
-                      onLoadedMetadata={(e) => {
-                        e.currentTarget.currentTime = 0;
-                      }}
-                      onMouseEnter={async (e) => {
-                        try {
-                          e.currentTarget.currentTime = 0;
-                          const playPromise = e.currentTarget.play();
-                          if (playPromise !== undefined) {
-                            await playPromise;
-                          }
-                        } catch (error) {
-                          console.log("Video play failed:", error);
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.pause();
-                        e.currentTarget.currentTime = 0;
-                      }}
-                      onClick={async (e) => {
-                        try {
-                          if (e.currentTarget.paused) {
-                            e.currentTarget.currentTime = 0;
-                            const playPromise = e.currentTarget.play();
-                            if (playPromise !== undefined) {
-                              await playPromise;
-                            }
-                          } else {
-                            e.currentTarget.pause();
-                            e.currentTarget.currentTime = 0;
-                          }
-                        } catch (error) {
-                          console.log("Video interaction failed:", error);
-                        }
-                      }}
-                    >
-                      <source src={videos[2].src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                    <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-                      <PlayButton />
-                    </div>
-                  </div>
+                  <video
+                    className="w-full h-[500px] md:h-[600px] lg:h-[700px] object-cover rounded-3xl shadow-lg"
+                    muted        // Mute for autoplay on hover
+                    loop         // Loop for continuous preview
+                    playsInline  // Important for mobile browsers
+                    preload="metadata"
+                    onLoadedMetadata={(e) => {
+                      e.currentTarget.currentTime = 0;
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.play().catch(error => console.log("Video play failed on hover:", error));
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.pause();
+                      e.currentTarget.currentTime = 0;
+                    }}
+                  >
+                    <source src={videos[2].src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
