@@ -92,11 +92,18 @@ export default function Contact() {
 
               {/* Map */}
               <div className="flex justify-center">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/f4993b9498bece2fbbe33569e5caaf652071ec8c?width=1420"
-                  alt="Location Map"
-                  className="w-full max-w-lg h-auto rounded-3xl shadow-lg"
-                />
+                <a
+                  href="https://maps.app.goo.gl/nd96LCHjNQeyj1b86?g_st=iw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105 cursor-pointer"
+                >
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f4993b9498bece2fbbe33569e5caaf652071ec8c?width=1420"
+                    alt="Location Map - Click to open in Google Maps"
+                    className="w-full max-w-lg h-auto rounded-3xl shadow-lg"
+                  />
+                </a>
               </div>
             </div>
           </div>
