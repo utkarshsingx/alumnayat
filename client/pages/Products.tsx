@@ -67,10 +67,11 @@ export default function Products() {
       link: "https://www.rupes.com/",
     },
     {
-      name: "Rx",
+      name: "Blowtherm",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/2a92127ce67837d6764bc2166bc0ae525666131e?width=728",
+        "https://cdn.builder.io/api/v1/image/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F29627b8dabbf4e7f9207c2cb50b1fad7?format=webp&width=800",
       background: "#FFF",
+      link: "https://share.google/1fPdT9XIRo64Mw5xx",
     },
     {
       name: "Najem",
