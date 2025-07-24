@@ -84,20 +84,32 @@ export default function Gallery() {
             </h2>
 
             <div className="space-y-8">
-              {/* Main Video */}
+              {/* Main Video - Full Width */}
               <div className="flex justify-center mb-12">
                 <div className="relative w-full max-w-6xl">
-                  <div className="w-full h-96 md:h-[500px] bg-gray-200 rounded-3xl overflow-hidden relative group">
+                  <div className="w-full h-96 md:h-[500px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
+                      ref={(video) => {
+                        if (video) {
+                          video.load();
+                        }
+                      }}
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      onMouseEnter={(e) => e.currentTarget.play()}
-                      onMouseLeave={(e) => e.currentTarget.pause()}
+                      preload="metadata"
+                      onMouseEnter={(e) => {
+                        e.currentTarget.currentTime = 0;
+                        e.currentTarget.play();
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.pause();
+                        e.currentTarget.currentTime = 0;
+                      }}
                     >
                       <source
-                        src="https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2Ffd7b2622f5d843f6a65edd8c4a44e72f?alt=media&token=ca845227-6353-4162-a3cf-2aedd8067767&apiKey=b5cbc2cd565549f5b89c85e3e34d9891"
+                        src={videos[0].src}
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -109,20 +121,32 @@ export default function Gallery() {
                 </div>
               </div>
 
-              {/* Two Smaller Videos */}
+              {/* Two Smaller Videos - More Height */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
-                  <div className="w-full h-64 md:h-80 bg-black rounded-3xl overflow-hidden relative group">
+                  <div className="w-full h-80 md:h-96 lg:h-[450px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
+                      ref={(video) => {
+                        if (video) {
+                          video.load();
+                        }
+                      }}
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      onMouseEnter={(e) => e.currentTarget.play()}
-                      onMouseLeave={(e) => e.currentTarget.pause()}
+                      preload="metadata"
+                      onMouseEnter={(e) => {
+                        e.currentTarget.currentTime = 0;
+                        e.currentTarget.play();
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.pause();
+                        e.currentTarget.currentTime = 0;
+                      }}
                     >
                       <source
-                        src="https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2Fa9f4573ba0254e1eb8fd2ce4f3e6646d?alt=media&token=17dc4127-fe51-4302-873b-125269d8f0c5&apiKey=b5cbc2cd565549f5b89c85e3e34d9891"
+                        src={videos[1].src}
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -133,17 +157,29 @@ export default function Gallery() {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="w-full h-64 md:h-80 bg-black rounded-3xl overflow-hidden relative group">
+                  <div className="w-full h-80 md:h-96 lg:h-[450px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
+                      ref={(video) => {
+                        if (video) {
+                          video.load();
+                        }
+                      }}
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      onMouseEnter={(e) => e.currentTarget.play()}
-                      onMouseLeave={(e) => e.currentTarget.pause()}
+                      preload="metadata"
+                      onMouseEnter={(e) => {
+                        e.currentTarget.currentTime = 0;
+                        e.currentTarget.play();
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.pause();
+                        e.currentTarget.currentTime = 0;
+                      }}
                     >
                       <source
-                        src="https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2Ff30839a8cee64247876744e3f1ddcb0b?alt=media&token=520b1e4b-8a78-4f12-b904-2469e872da0d&apiKey=b5cbc2cd565549f5b89c85e3e34d9891"
+                        src={videos[2].src}
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
