@@ -19,10 +19,32 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+
+    // Create email content
+    const subject = "Contact Form Submission from Al Umnayat Website";
+    const body = `
+New contact form submission:
+
+Name: ${formData.name}
+Surname: ${formData.surname}
+Email: ${formData.email}
+Message: ${formData.message}
+
+---
+This email was sent from the Al Umnayat Auto Paints website contact form.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:samsan.dxb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
     // Reset form
     setFormData({ name: "", surname: "", email: "", message: "" });
+
+    // Show success message
+    alert("Your message has been prepared for sending. Your email client should open shortly.");
   };
 
   return (
