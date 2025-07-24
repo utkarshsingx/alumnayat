@@ -167,7 +167,7 @@ export default function Gallery() {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="w-full h-80 md:h-96 lg:h-[450px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
+                  <div className="w-full h-96 md:h-[500px] lg:h-[600px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
                       className="w-full h-full object-cover"
                       loop
