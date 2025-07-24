@@ -89,19 +89,13 @@ export default function Gallery() {
                 <div className="relative w-full max-w-6xl">
                   <div className="w-full h-96 md:h-[500px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
-                      ref={(video) => {
-                        if (video) {
-                          video.load();
-                        }
-                      }}
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      preload="metadata"
+                      preload="auto"
                       onMouseEnter={(e) => {
-                        e.currentTarget.currentTime = 0;
-                        e.currentTarget.play();
+                        e.currentTarget.play().catch(console.log);
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
@@ -126,19 +120,13 @@ export default function Gallery() {
                 <div className="relative">
                   <div className="w-full h-80 md:h-96 lg:h-[450px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
-                      ref={(video) => {
-                        if (video) {
-                          video.load();
-                        }
-                      }}
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      preload="metadata"
+                      preload="auto"
                       onMouseEnter={(e) => {
-                        e.currentTarget.currentTime = 0;
-                        e.currentTarget.play();
+                        e.currentTarget.play().catch(console.log);
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
@@ -159,19 +147,13 @@ export default function Gallery() {
                 <div className="relative">
                   <div className="w-full h-80 md:h-96 lg:h-[450px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
-                      ref={(video) => {
-                        if (video) {
-                          video.load();
-                        }
-                      }}
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      preload="metadata"
+                      preload="auto"
                       onMouseEnter={(e) => {
-                        e.currentTarget.currentTime = 0;
-                        e.currentTarget.play();
+                        e.currentTarget.play().catch(console.log);
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
