@@ -19,12 +19,12 @@ export default function Contact() {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/447127c82849cb3ff20911b964184896caa2dfba?width=3840"
             alt="Contact Us Banner Overlay"
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-80"
           />
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/b9f2750dcf611341f8e4433e4d606ddb73298ae7?width=3840"
             alt="Contact Us Banner Top"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           />
         </div>
       </section>
