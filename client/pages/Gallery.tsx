@@ -93,12 +93,17 @@ export default function Gallery() {
                       loop
                       muted
                       playsInline
-                      preload="auto"
-                      controls={false}
+                      preload="metadata"
+                      onLoadedMetadata={(e) => {
+                        e.currentTarget.currentTime = 0;
+                      }}
                       onMouseEnter={async (e) => {
                         try {
                           e.currentTarget.currentTime = 0;
-                          await e.currentTarget.play();
+                          const playPromise = e.currentTarget.play();
+                          if (playPromise !== undefined) {
+                            await playPromise;
+                          }
                         } catch (error) {
                           console.log('Video play failed:', error);
                         }
@@ -107,12 +112,20 @@ export default function Gallery() {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
                       }}
-                      onTouchStart={async (e) => {
+                      onClick={async (e) => {
                         try {
-                          e.currentTarget.currentTime = 0;
-                          await e.currentTarget.play();
+                          if (e.currentTarget.paused) {
+                            e.currentTarget.currentTime = 0;
+                            const playPromise = e.currentTarget.play();
+                            if (playPromise !== undefined) {
+                              await playPromise;
+                            }
+                          } else {
+                            e.currentTarget.pause();
+                            e.currentTarget.currentTime = 0;
+                          }
                         } catch (error) {
-                          console.log('Video play failed:', error);
+                          console.log('Video interaction failed:', error);
                         }
                       }}
                     >
@@ -126,21 +139,26 @@ export default function Gallery() {
                 </div>
               </div>
 
-              {/* Two Smaller Videos - Portrait Format */}
+              {/* Two Portrait Videos - Increased Height */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
-                  <div className="w-full h-96 md:h-[500px] lg:h-[600px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
+                  <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      preload="auto"
-                      controls={false}
+                      preload="metadata"
+                      onLoadedMetadata={(e) => {
+                        e.currentTarget.currentTime = 0;
+                      }}
                       onMouseEnter={async (e) => {
                         try {
                           e.currentTarget.currentTime = 0;
-                          await e.currentTarget.play();
+                          const playPromise = e.currentTarget.play();
+                          if (playPromise !== undefined) {
+                            await playPromise;
+                          }
                         } catch (error) {
                           console.log('Video play failed:', error);
                         }
@@ -149,12 +167,20 @@ export default function Gallery() {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
                       }}
-                      onTouchStart={async (e) => {
+                      onClick={async (e) => {
                         try {
-                          e.currentTarget.currentTime = 0;
-                          await e.currentTarget.play();
+                          if (e.currentTarget.paused) {
+                            e.currentTarget.currentTime = 0;
+                            const playPromise = e.currentTarget.play();
+                            if (playPromise !== undefined) {
+                              await playPromise;
+                            }
+                          } else {
+                            e.currentTarget.pause();
+                            e.currentTarget.currentTime = 0;
+                          }
                         } catch (error) {
-                          console.log('Video play failed:', error);
+                          console.log('Video interaction failed:', error);
                         }
                       }}
                     >
@@ -167,18 +193,23 @@ export default function Gallery() {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="w-full h-96 md:h-[500px] lg:h-[600px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
+                  <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer">
                     <video
                       className="w-full h-full object-cover"
                       loop
                       muted
                       playsInline
-                      preload="auto"
-                      controls={false}
+                      preload="metadata"
+                      onLoadedMetadata={(e) => {
+                        e.currentTarget.currentTime = 0;
+                      }}
                       onMouseEnter={async (e) => {
                         try {
                           e.currentTarget.currentTime = 0;
-                          await e.currentTarget.play();
+                          const playPromise = e.currentTarget.play();
+                          if (playPromise !== undefined) {
+                            await playPromise;
+                          }
                         } catch (error) {
                           console.log('Video play failed:', error);
                         }
@@ -187,12 +218,20 @@ export default function Gallery() {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
                       }}
-                      onTouchStart={async (e) => {
+                      onClick={async (e) => {
                         try {
-                          e.currentTarget.currentTime = 0;
-                          await e.currentTarget.play();
+                          if (e.currentTarget.paused) {
+                            e.currentTarget.currentTime = 0;
+                            const playPromise = e.currentTarget.play();
+                            if (playPromise !== undefined) {
+                              await playPromise;
+                            }
+                          } else {
+                            e.currentTarget.pause();
+                            e.currentTarget.currentTime = 0;
+                          }
                         } catch (error) {
-                          console.log('Video play failed:', error);
+                          console.log('Video interaction failed:', error);
                         }
                       }}
                     >
