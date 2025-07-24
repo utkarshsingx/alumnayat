@@ -111,16 +111,36 @@ export default function Products() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {brands.map((brand, index) => (
                 <div key={index} className="flex justify-center">
-                  <div
-                    className="w-80 h-80 rounded-3xl border-4 border-brand-navy p-4 flex items-center justify-center"
-                    style={{ backgroundColor: brand.background }}
-                  >
-                    <img
-                      src={brand.image}
-                      alt={brand.name}
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
+                  {brand.link ? (
+                    <a
+                      href={brand.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105"
+                    >
+                      <div
+                        className="w-80 h-80 rounded-3xl border-4 border-brand-navy p-4 flex items-center justify-center cursor-pointer"
+                        style={{ backgroundColor: brand.background }}
+                      >
+                        <img
+                          src={brand.image}
+                          alt={brand.name}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                    </a>
+                  ) : (
+                    <div
+                      className="w-80 h-80 rounded-3xl border-4 border-brand-navy p-4 flex items-center justify-center"
+                      style={{ backgroundColor: brand.background }}
+                    >
+                      <img
+                        src={brand.image}
+                        alt={brand.name}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
