@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
     <header className="bg-white shadow-sm relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
