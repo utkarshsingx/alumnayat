@@ -87,30 +87,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Social Media Icons */}
-                <div className="flex space-x-8 pt-8">
-                  <a href="#" className="hover:opacity-80 transition-opacity">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/4d7a403fcb0d77250572afcec716644ad1151623?width=162"
-                      alt="LinkedIn"
-                      className="w-12 h-12"
-                    />
-                  </a>
-                  <a href="#" className="hover:opacity-80 transition-opacity">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/67f1db7319f410808a101c8c08bf736b0506c577?width=162"
-                      alt="Instagram"
-                      className="w-12 h-12"
-                    />
-                  </a>
-                  <a href="#" className="hover:opacity-80 transition-opacity">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/1268611058cfd93901745c0b505a171c81301bb6?width=162"
-                      alt="Facebook"
-                      className="w-12 h-12"
-                    />
-                  </a>
-                </div>
+
               </div>
 
               {/* Map */}
