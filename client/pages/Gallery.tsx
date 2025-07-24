@@ -94,12 +94,26 @@ export default function Gallery() {
                       muted
                       playsInline
                       preload="auto"
-                      onMouseEnter={(e) => {
-                        e.currentTarget.play().catch(console.log);
+                      controls={false}
+                      onMouseEnter={async (e) => {
+                        try {
+                          e.currentTarget.currentTime = 0;
+                          await e.currentTarget.play();
+                        } catch (error) {
+                          console.log('Video play failed:', error);
+                        }
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
+                      }}
+                      onTouchStart={async (e) => {
+                        try {
+                          e.currentTarget.currentTime = 0;
+                          await e.currentTarget.play();
+                        } catch (error) {
+                          console.log('Video play failed:', error);
+                        }
                       }}
                     >
                       <source src={videos[0].src} type="video/mp4" />
@@ -122,12 +136,26 @@ export default function Gallery() {
                       muted
                       playsInline
                       preload="auto"
-                      onMouseEnter={(e) => {
-                        e.currentTarget.play().catch(console.log);
+                      controls={false}
+                      onMouseEnter={async (e) => {
+                        try {
+                          e.currentTarget.currentTime = 0;
+                          await e.currentTarget.play();
+                        } catch (error) {
+                          console.log('Video play failed:', error);
+                        }
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
+                      }}
+                      onTouchStart={async (e) => {
+                        try {
+                          e.currentTarget.currentTime = 0;
+                          await e.currentTarget.play();
+                        } catch (error) {
+                          console.log('Video play failed:', error);
+                        }
                       }}
                     >
                       <source src={videos[1].src} type="video/mp4" />
@@ -146,12 +174,26 @@ export default function Gallery() {
                       muted
                       playsInline
                       preload="auto"
-                      onMouseEnter={(e) => {
-                        e.currentTarget.play().catch(console.log);
+                      controls={false}
+                      onMouseEnter={async (e) => {
+                        try {
+                          e.currentTarget.currentTime = 0;
+                          await e.currentTarget.play();
+                        } catch (error) {
+                          console.log('Video play failed:', error);
+                        }
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
                         e.currentTarget.currentTime = 0;
+                      }}
+                      onTouchStart={async (e) => {
+                        try {
+                          e.currentTarget.currentTime = 0;
+                          await e.currentTarget.play();
+                        } catch (error) {
+                          console.log('Video play failed:', error);
+                        }
                       }}
                     >
                       <source src={videos[2].src} type="video/mp4" />
