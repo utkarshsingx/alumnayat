@@ -77,6 +77,7 @@ export default function Products() {
       image:
         "https://api.builder.io/api/v1/image/assets/TEMP/215b6ebeb0e5cf8636d2f1a17fd3ede4f7af4c74?width=766",
       background: "#FFF",
+      link: "https://www.najemalkawkab.com/",
     },
     {
       name: "Deer",
