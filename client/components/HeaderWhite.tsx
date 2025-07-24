@@ -125,7 +125,11 @@ export default function HeaderWhite() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button className="text-white p-2">
+            <button
+              className="text-white p-2"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+            >
               <svg
                 className="h-6 w-6"
                 fill="none"
@@ -136,7 +140,7 @@ export default function HeaderWhite() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
+                  d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
                 />
               </svg>
             </button>
