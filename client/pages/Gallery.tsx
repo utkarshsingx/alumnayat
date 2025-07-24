@@ -17,9 +17,24 @@ export default function Gallery() {
     },
   ];
 
+  const videos = [
+    {
+      src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F40fe2dfc2bcf45c4adfe6842ef6ad07a?alt=media&token=e2d0d1f3-7684-4776-8f46-b3bb38a0d666&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
+      type: "main"
+    },
+    {
+      src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F2776c706b5d44fab9b83cb64fa4e8963?alt=media&token=5fc156ae-2962-4f85-a310-fd369338bd65&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
+      type: "side"
+    },
+    {
+      src: "https://cdn.builder.io/o/assets%2Fb5cbc2cd565549f5b89c85e3e34d9891%2F4224a000d2644e5695b52753ba61243c?alt=media&token=f162f5fa-1e8f-48c8-84cd-5994b80c42f4&apiKey=b5cbc2cd565549f5b89c85e3e34d9891",
+      type: "side"
+    }
+  ];
+
   const PlayButton = () => (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="w-18 h-18 md:w-24 md:h-24 bg-white bg-opacity-80 rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-90 transition-all">
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="w-18 h-18 md:w-24 md:h-24 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
         <svg
           width="48"
           height="48"
